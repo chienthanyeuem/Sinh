@@ -1,5 +1,5 @@
 void setup() {
-	FOR(i, 1, n - k + 1) {
+	FOR(i, 1, k + 1) {
 		a[i] = i;
 	}
 }
