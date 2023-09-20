@@ -1,0 +1,19 @@
+void setup() {
+	FOR(i, 1, n - k + 1) {
+		a[i] = i;
+	}
+}
+
+void sinh() {
+	int i = k;
+	FOR(i, 1, k+1) cout << a[i];
+	cout << endl;
+	while (i >= 1 and a[i] == n - k + i) {
+		--i;
+	}
+	if (i == 0) ok = 0;
+	else {
+		a[i]++;
+		FOR(j, i + 1, k + 1) a[j] = a[j-1] + 1;
+	}
+}
