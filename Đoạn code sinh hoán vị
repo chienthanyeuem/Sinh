@@ -1,0 +1,28 @@
+void setup() {
+	FOR(i, 1, n + 1) {
+		a[i] = i;
+	}
+}
+
+void sinh() {
+	int i = n - 1;
+	FOR(j, 1, n + 1) {
+		cout << x[a[j] - 1] << " ";
+	}
+	cout << endl;
+	while (i > 0 and a[i] > a[i + 1]) {
+		--i;
+	}
+	if (i == 0) ok = 0;
+	else {
+		// tim thang > trong doan i+1 -> n
+		int j = n;
+		while (a[i] > a[j]) --j;
+		swap(a[i], a[j]);
+		int l = i + 1, r = n;
+		while (l < r) {
+			swap(a[l], a[r]);
+			l++, r--;
+		}
+	}
+}
