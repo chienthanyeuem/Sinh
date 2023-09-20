@@ -6,7 +6,7 @@ void setup() {
 
 void sinh() {
 	int i = k;
-	FOR(i, 1, k+1) cout << a[i];
+	FOR(j, 1, k+1) cout << a[j];
 	cout << endl;
 	while (i >= 1 and a[i] == n - k + i) {
 		--i;
